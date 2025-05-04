@@ -1,0 +1,26 @@
+pipeline:
+  name: HelloWorldPipeline
+  identifier: HelloWorldPipeline
+  projectIdentifier: your_project_id
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Hello Stage
+        identifier: Hello_Stage
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: Say Hello
+                  identifier: say_hello
+                  type: ShellScript
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "Hello World"
+                    environmentVariables: []
+                    outputVariables: []
