@@ -9,14 +9,14 @@ terraform {
 
 provider "harness" {
   endpoint   = "https://app.harness.io/gateway"
-  account_id = "YOUR_ACCOUNT_ID"
-  api_key    = "YOUR_API_KEY"
+  account_id = "gaH9N1R3RxOLWwL1NHt0dQ"
+  api_key    = "sat.gaH9N1R3RxOLWwL1NHt0dQ.6816ea6729910c5fa72d9ec8.Rc3Fg5ZX6UlEqCuAmDkA"
 }
 
 resource "harness_platform_pipeline" "hello_pipeline" {
   identifier = "HelloWorldPipeline"
   name       = "HelloWorldPipeline"
   org_id     = "default"
-  project_id = "your_project_id"
+  project_id = "harness"
   yaml       = file("pipeline.yaml")
 }
